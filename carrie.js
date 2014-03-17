@@ -17,7 +17,15 @@ function carrieJS(option){
   var config = {
     CSS: {
       current: 'nav-active',
-      mobile: 'nav-mobile'
+      mobile: 'nav-mobile',
+      //.mobile-nav-btn
+      //.mobile-menu
+      //.sub-mobile-btn
+      //.nav-parent
+      //.sub-expand
+      //.sub-mobile-nav-icon
+      //.sub-mobile-active
+      //.sub-nav-parent
     },
     IDs: {
       container: 'navigation'
@@ -64,12 +72,12 @@ function carrieJS(option){
   
   function currentNavItem(){
   
-    $('#navigation').find('a').each(function(){
+    $(container).find('a').each(function(){
       var path = $(this).attr('href');
       
       if(window.location.pathname.indexOf(path) != -1 && path.length > leng){
         leng = path.length
-        $(this).addClass('active').siblings().removeClass('active');
+        $(this).addClass('nav-active').siblings().removeClass('nav-active');
       }
     });
     
@@ -82,7 +90,7 @@ function carrieJS(option){
     $(container + ' ul:first-child').addClass('mobile-menu');
     
     $(container + ' ul li').addClass('sub-mobile-btn');
-    $(container + ' li > ul').parent().addClass('expand').prepend(subDropBtn);
+    $(container + ' li > ul').parent().addClass('sub-expand').prepend(subDropBtn);
     
     $(container + ' ul ul').addClass('sub-mobile-menu');
     $(container).prepend(mobileBtn);
