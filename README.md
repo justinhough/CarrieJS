@@ -1,7 +1,7 @@
 CarrieJS
 ========
 
-**Current Version:** 1.0
+**Current Version:** 1.0 (beta)
 
 CarrieJS is a complete JavaScript menu system for mobile and desktop web sites.
 
@@ -30,7 +30,7 @@ CarrieJS is a complete JavaScript menu system for mobile and desktop web sites.
 
 ## Version History
 
-**Version 1.0** - (in progress)
+**Version 1.0 (beta)**
 - dropdown menu created from `<ul>` list.
 - ID's and classes configurable on build
 - screen resize function
