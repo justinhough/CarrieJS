@@ -28,12 +28,117 @@ a:hover {
 }
 
 
+
 .mobile-nav-btn {
   display: none;
 }
 
 
+#navigation {
+  border-bottom: 1px solid hotpink;
+  position: relative;
+}
+#navigation ul {}
+#navigation li {
+  display: inline-block;
+  height: 100%;
+  padding: 0;
+}
+
+#navigation li a {
+  background-color: hotpink;
+  border: 1px solid hotpink;
+  border-bottom: none;
+  box-sizing: border-box;
+  color: #FFF;
+  display: block;
+  margin: 0;
+  padding: 0.3em 1em;
+  text-decoration: none;
+}
+#navigation li a:hover {
+  background: #CCC;
+  border-color: #CCC;
+}
+
+#navigation .sub-mobile-menu {
+  background: #DEDEDE;
+  /* display: none; */
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+}
+#navigation .sub-mobile-menu a {
+  background: transparent;
+  border: none;
+  color: hotpink;
+  display: block;
+  height: 100%;
+}
+
+#navigation .sub-mobile-menu li {
+  float: left;
+}
+
+
+/*
+#navigation .sub-mobile-menu.test-show {
+  display: block;
+}
+*/
+#navigation .sub-mobile-menu .sub-nav-parent {
+  display: none;
+}
+
+
+
+
+
 @media screen and (max-width: 600px) {
+  
+  /* Desktop Resets */
+  
+  #navigation {
+    border-bottom: none;
+  }
+
+  #navigation ul {}
+  #navigation li {
+    display: block;
+  }
+ 
+  #navigation li a {
+    background-color: transparent;
+    border: none;
+    color: hotpink;
+    display: block;
+    margin: 0;
+    padding: 0.3em;
+    text-decoration: none;
+  }
+  #navigation li a:hover {
+    background: none;
+    border-color: transparent;
+  }
+  #navigation li:hover a {
+    background: #CCC;
+  }
+  
+  #navigation .sub-mobile-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #navigation .sub-nav-parent {
+    display: block;
+  }
+  #navigation .sub-mobile-menu li {
+    float: none;
+  }
+  
+  /* End of Desktop Resets */
+  
   
   .nav-active {
     font-weight: bold;
@@ -68,13 +173,21 @@ a:hover {
   /* Sub Mobile Menu */
   .sub-mobile-menu {
     display: none;
-    margin: 0.5em 0 0 0;
+    /* margin: 0.5em 0 0 0; */
   }
   .sub-mobile-active .sub-mobile-menu {
     display: block;
   }
   .sub-mobile-menu li {
+    background: #FFF;
     padding: 0;
+  }
+  #navigation li.expand:hover ul a {
+    background: #FFF;
+  }
+  #navigation li.expand ul a:hover {
+    background: hotpink;
+    color: #FFF;
   }
   .sub-mobile-menu li a {
     border-bottom: 1px solid #CCC;
@@ -111,7 +224,6 @@ a:hover {
   .expand.sub-mobile-active {
     background: #CCC;
   }
-  
   
 }
 
