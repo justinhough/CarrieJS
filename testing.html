@@ -2,54 +2,92 @@
 <html>
 <head>
 
-  <title>Carrie JS</title>
+  <title>Testing | Carrie JS</title>
   <!-- styles go here -->
   <link href="carriejs.css" rel="stylesheet" type="text/css" />
   <!-- scripts go here -->
-<!--   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> -->
-  <script src="carrie.js" type="text/javascript"></script>
-<!--
+  <script src="js/libs/jquery-1.11.1.min.js"></script>
+  <!-- <script src="js/carrie.js" type="text/javascript"></script> -->
+  <script src="js/jquery.carrie.js" type="text/javascript"></script>
   <script>
-    $(document).ready(function(){ carrieJS() });
+    $(document).ready(function(){ 
+      carrieJS()
+    });
   </script>
--->
+  
+  <style>
+    body {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-top: 0;
+      text-align: left;
+      text-rendering: optimizeLegibility
+    }
+    header {}
+    header h1 {
+      color: hotpink;
+      font-size: 3em;
+      font-weight: 200;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    header p {
+      font-size: 1em;
+      margin: 0 0 1.5em 0;
+    }
+  </style>
+  
 
 </head>
 <body>
   
+  <header>
+   <h1>Carrie<strong>JS</strong></h1>
+   <p>A good ole' fashioned menu</p> 
+  </header>
+  
+  
   <nav id="navigation">
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a class="nav-parent" href="testing.html">Section</a>
-        <ul>
-          <li><a class="sub-nav-parent" href="testing.html">Section</a></li>
-          <li><a href="section/subpage1.html">Subpage 1</a></li>
-          <li><a href="section/subpage2.html">Subpage 2</a></li>
-          <li><a href="section/subpage3.html">Subpage 3</a></li>
+    <ul data-mobile="closed">
+      
+      <li><a href="index.html">Home</a></li>
+      
+      <li><a class="nav-parent" href="testing.html">Testing</a>
+        <ul class="test-show">
+          <li class="sub-nav-parent"><a href="testing.html">Testing</a></li>
+          <li><a href="#section-subpage">Subpage 1 with long name</a></li>
+          <li><a href="#section-subpage2">Subpage 2</a></li>
+          <li><a href="#section-subpage3">Subpage 3</a></li>
         </ul>
       </li>
-      <li><a class="nav-parent" href="about/index.html">About</a>
+      
+      <li><a class="nav-parent" href="#section">Section 2</a>
         <ul>
-          <li><a class="sub-nav-parent" href="about/index.html">About</a></li>
-          <li><a href="about/subpage1.html">Subpage 1</a></li>
-          <li><a href="about/subpage2.html">Subpage 2</a></li>
-          <li><a href="about/subpage3.html">Subpage 3</a></li>
+          <li class="sub-nav-parent"><a href="#section">Section 2</a></li>
+          <li><a href="#section-subpage">Subpage 1</a></li>
+          <li><a href="#section-subpage2">Subpage 2</a></li>
+          <li><a href="#section-subpage3">Subpage 3</a></li>
         </ul>
       </li>
-      <li><a class="nav-parent" href="section/index.html">Section</a>
+      
+      <li><a class="nav-parent" href="#about">About</a>
         <ul>
-          <li><a class="sub-nav-parent" href="section/index.html">Section</a></li>
-          <li><a href="section/subpage1.html">Subpage 1</a></li>
-          <li><a href="section/subpage2.html">Subpage 2</a></li>
-          <li><a href="section/subpage3.html">Subpage 3</a></li>
+          <li class="sub-nav-parent"><a href="#about">About</a></li>
+          <li><a href="#about-subpage">Subpage 1</a></li>
+          <li><a href="#about-subpage2">Subpage 2</a></li>
+          <li><a href="#about-subpage3">Subpage 3</a></li>
         </ul>
       </li>
-      <li><a class="nav-parent" href="contact/index.html">Contact</a>
+      
+      <li><a class="nav-parent" href="#contact">Contact</a>
         <ul>
-          <li><a class="sub-nav-parent" href="#contact/index.html">Contact</a></li>
-          <li><a href="contact/subpage1.html">Subpage 1</a></li>
-          <li><a href="contact/subpage2.html">Subpage 2</a></li>
-          <li><a href="contact/subpage3.html">Subpage 3</a></li>
+          <li class="sub-nav-parent"><a href="#contact">Contact</a></li>
+          <li><a href="#contact-subpage">Subpage 1</a></li>
+          <li><a href="#contact-subpage2">Subpage 2</a></li>
+          <li><a href="#contact-subpage3">Subpage 3</a></li>
         </ul>
       </li>
     </ul>
