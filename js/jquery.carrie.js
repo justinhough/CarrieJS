@@ -148,7 +148,7 @@ function carrieJS(option){
     width = $(document).width();
     if (width > 600) {
       $(container).removeClass('nav-mobile');
-      $('#navigation ul[data-mobile').show();
+      $('#navigation ul[data-mobile]').show();
     }
     else {
       $(container).addClass('nav-mobile');
