@@ -28,71 +28,70 @@ a:hover {
 }
 
 
-/* @media screen and (max-width: 600px) { */
+.mobile-nav-btn {
+  display: none;
+}
 
-  /* Navigation */
-  #navigation {
-    background: #EDEDED;
-    box-sizing: border-box;
-    /* padding: 1em; */
-    width: 100%;
-  }
-  .nav-mobile {}
+
+@media screen and (max-width: 600px) {
   
-  /* Opens Mobile Menu */
+  .nav-active {
+    font-weight: bold;
+  }
+  
   .mobile-nav-btn {
-    background: #999;
-    color: #FFF;
+    background: hotpink;
     box-sizing: border-box;
+    color: #FFF;
     cursor: pointer;
-    display: inline-block;
-    height: auto;
-    padding: 0.5em;
+    display: block;
+    padding: 0.3em;
     width: 100%;
   }
   
-  
-  /* Main Menu */
-  .mobile-menu {}
-  
-  .mobile-menu[data-state=closed] {
-    display: none;
+  /* Main Mobile Menu */
+  .mobile-menu {
+    border: 1px solid #CCC;
+    border-top: none;
   }
-  .mobile-menu[data-state=open] {
-    display: inherit;
-  }
-  
-  
-  /* Submenu items */
-  .sub-mobile-btn {
-    border-bottom: 1px solid #FFF;
+  .mobile-menu li {
+    background: #DEDEDE;
     position: relative;
   }
-  .sub-mobile-btn a {
+  .mobile-menu li a {
     display: block;
     width: 100%;
   }
-  .sub-mobile-active {
-    background-color: #CCC;
-  }
+  
 
-
-  /* Parent Item for Submenu */
-  .nav-parent {}
   
-  
-  /* Submenu Items with Children */
-  .expand {
-    background: #DEDEDE;
+  /* Sub Mobile Menu */
+  .sub-mobile-menu {
+    display: none;
+    margin: 0.5em 0 0 0;
   }
-  .expand:hover {
-    background-color: #CCC;
+  .sub-mobile-active .sub-mobile-menu {
+    display: block;
+  }
+  .sub-mobile-menu li {
+    padding: 0;
+  }
+  .sub-mobile-menu li a {
+    border-bottom: 1px solid #CCC;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  .sub-mobile-menu li a:hover {
+    background: hotpink;
+    color: #FFF;
+    text-decoration: none;
   }
   
+   
   
   /* Submenu Item Icon */
   .sub-mobile-nav-icon {
-    background-image: url('http://placehold.it/20');
+    background-image: url('http://placehold.it/20/FFFFFF');
     background-position: 98% 4px;
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -106,44 +105,14 @@ a:hover {
   }
   .sub-mobile-nav-icon:hover,
   .sub-mobile-active .sub-mobile-nav-icon {
-    background-image: url('http://placehold.it/20/000000');
+    background-image: url('http://placehold.it/20/FF69B4');
+  }
+  .expand:hover,
+  .expand.sub-mobile-active {
+    background: #CCC;
   }
   
   
-  /* Submenu Children Menu */
-  .sub-mobile-menu {
-    display: none;
-    margin-top: 5px;
-  }
-/*
-  .sub-mobile-menu[data-state=closed] {
-    display: none;
-  }
-  .sub-mobile-menu[data-state=open] {
-    display: inherit;
-  }
-*/
-  .sub-mobile-menu li {
-    background-color: #EDEDED;
-    border-bottom: 1px solid #CCC;
-  }
-  /* Parent Item - Nested in Sub-Sub Menu */
-  .sub-mobile-menu .nav-parent {
-    color: orange;
-    text-indent: 0;
-  }
-  
-  
+}
 
-
-  
-
-  /* Current Nav Item */
-  .nav-active {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-
-/* } */
 
